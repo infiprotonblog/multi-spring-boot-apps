@@ -2,18 +2,18 @@ version: '3'
 
 services:
   spring-app-1:
-    image: ${SPRING_APP_1_IMAGE}
-    container_name: ${SPRING_APP_1_CONTAINER}
+    image: spring-app-1
+    container_name: spring-app-1
     build:
       context: ./spring-boot-app-one/springapp1
       dockerfile: Dockerfile
     ports:
-      - "${SPRING_APP_1_PORT}:${SPRING_APP_1_PORT}"
+      - "8080:8080"
   spring-app-2:
-    image: ${SPRING_APP_2_IMAGE}
-    container_name: ${SPRING_APP_2_CONTAINER}
+    image: spring-app-2
+    container_name: spring-app-2
     build:
       context: ./spring-boot-app-two/spring-app-2/
       dockerfile: Dockerfile
     ports:
-      - "${SPRING_APP_2_PORT}:${SPRING_APP_2_PORT}"
+      - "8090:8090"
